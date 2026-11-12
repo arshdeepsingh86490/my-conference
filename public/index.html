@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Conference</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/043/211/173/small/people-gathered-in-front-of-a-blue-and-orange-logo-develop-a-clean-elegant-logo-for-a-conference-management-firm-free-vector.jpg"
+                alt="Logo">
+            <h1>My conference</h1>
+        </div>
+        <div class="navbar">
+            <span class="logo">Conference Management system</span>
+            <nav class="links">
+                <a href="#home">Home</a>
+                <a href="#events">Events</a>
+                <a href="#registration">Registration</a>
+                <!-- <a href="#faq">FAQ</a> -->
+            </nav>
+        </div>
+    </header>
+    <section id="home" class="alt">
+        <main>
+            <div class="container">
+                <h2>Welcome to my Conference</h2>
+                <p>Join us for an exciting conference where industry leaders and
+                    experts come together to share their knowledge and insights.
+                    we conduct workshops and sessions to provide
+                    a comprehensive learning experience.</p>
+                <!-- <div class="text">
+                                <div></div>
+                                <div>Join us for an exciting conference where industry leaders and
+                     experts come together to share their knowledge and insights.
+                        we conduct workshops and sessions to provide 
+                            a comprehensive learning experience.</div>
+                                <div></div>
+                            </div> -->
+            </div>
+        </main>
+
+    </section>
+    <section id="events" class="alt">
+        <main>
+            <div class="conference">
+                <h2>Upcoming Events</h2>
+                <div class="conference-card" id="best">
+                    <h3>AI & Future Technology</h3>
+                    <img src="AI.jpg">
+                    <p>Date: January 15, 2027</p>
+                    <p>Venue: shanti Devi Mittal Auditorium, LPU Jalandhar</p>
+                    <p>Description: Explore the latest advancements in artificial intelligence and their impact on the
+                        future.</p>
+                </div>
+                <div class="conference-card">
+                    <h3>Cyber security Workshop</h3>
+                    <img src="Cyber.jpg">
+                    <p>Date: February 20, 2027</p>
+                    <p>Venue: shanti Devi Mittal Auditorium, LPU Jalandhar</p>
+                    <p>Description: Learn about the latest threats and defense strategies in cybersecurity.</p>
+                </div>
+                <div class="conference-card">
+                    <h3>Data Science & Analytics</h3>
+                    <img src="data.jpg">
+                    <p>Date: March 10, 2027</p>
+                    <p>Venue: shanti Devi Mittal Auditorium, LPU Jalandhar</p>
+                    <p>Description: Discover how data science is transforming industries and driving innovation.</p>
+                </div>
+                <div class="conference-card">
+                    <h3>Web Development summit</h3>
+                    <img src="web development.jpg">
+                    <p>Date: April 5, 2027</p>
+                    <p>Venue: shanti Devi Mittal Auditorium, LPU Jalandhar</p>
+                    <p>Description: Join us for an in-depth look at the latest trends and best practices in web
+                        development.</p>
+                </div>
+            </div>
+        </main>
+    </section>
+    <section id="registration" class="alt">
+        <main>
+            <div class="container">
+                <h2>Registration</h2>
+                <p>Please fill out the form below to register for the conference.</p>
+                <!-- <form action="about.html" method="GET">
+                    <div>
+                        <label for="name">FullName:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" maxlength="10" minlength="10" required>
+                    </div>
+                    <div>
+                        <label for="number">Registration Number:</label>
+                        <input type="number" id="number" name="number" minlength="6" maxlength="6" required>
+                    </div>
+                    <div>
+                        <label for="event">Select Conference:</label>
+                        <select id="event" name="event" required>
+                            <option value="">--Please choose an event--</option>
+                            <option value="ai_future_tech">AI & Future Technology</option>
+                            <option value="cyber_security_workshop">Cyber security Workshop</option>
+                            <option value="data_science_analytics">Data Science & Analytics</option>
+                            <option value="web_dev_summit">Web Development summit</option>
+                        </select>
+                    </div>
+                    <button type="submit">Register</button>
+
+                </form> -->
+
+                <form id="registrationForm">
+
+    <div>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required
+               placeholder="Enter your full name">
+    </div>
+
+    <div>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" required
+               placeholder="Enter your email">
+    </div>
+
+    <div>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone"
+               pattern="[0-9]{10}" maxlength="10"
+               inputmode="numeric" required
+               placeholder="Enter 10-digit phone number">
+    </div>
+
+    <div>
+        <label for="number">College Registration Number:</label>
+        <input type="text" id="number"
+               required pattern="[A-Za-z0-9]{6,20}"
+               placeholder="Enter your college registration number">
+    </div>
+
+    <div>
+        <label for="event">Select Conference:</label>
+        <select id="event" required>
+            <option value="">--Please choose an event--</option>
+            <option value="AI & Future Technology">AI & Future Technology</option>
+            <option value="Cyber Security Workshop">Cyber Security Workshop</option>
+            <option value="Data Science & Analytics">Data Science & Analytics</option>
+            <option value="Web Development Summit">Web Development Summit</option>
+        </select>
+    </div>
+
+    <button type="submit">Register Now</button>
+
+</form>
+
+<!-- Registration confirmation will appear here -->
+<div id="confirmation" hidden></div>
+
+            </div>
+        </main>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2027 My Conference. All rights reserved.</p>
+        </div>
+    </footer>
+
+</html>
